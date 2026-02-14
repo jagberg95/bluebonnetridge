@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bluebonnet Ridge Farmhouse – A timeless homestead retreat in Central Texas. Relax on the back patio, surrounded by pecan orchards and open skies. Book your stay today.">
+  <title>Bluebonnet Ridge Farmhouse | Stay With Us</title>
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900|Lato:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    body { background: #FFF8E7; }
+    .farm-hero {
+      min-height: 100vh;
+      background: url('assets/placeholder-farmhouse.jpg') center/cover no-repeat;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .farm-hero-overlay {
+      background: linear-gradient(to bottom, rgba(255,255,255,0.2) 60%, #FFF8E7 100%);
+      position: absolute; left: 0; top: 0; width: 100%; height: 100%;
+      z-index: 1;
+    }
+    .farm-hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: #4169E1;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    .farm-hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: #fff;
+      text-shadow: 0 2px 16px #4169E1, 0 0 2px #D4AF37;
+      margin-bottom: 1.2rem;
+      -webkit-text-stroke: 1px #D4AF37;
+    }
+    .farm-hero-sub {
+      font-family: 'Lato', Arial, sans-serif;
+      font-size: 1.2rem;
+      color: #FFF8E7;
+      margin-bottom: 2rem;
+      text-shadow: 0 2px 8px #4169E1;
+    }
+    .farm-cta {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+    }
+    .farm-btn {
+      background: #D4AF37;
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      padding: 1rem 2.2rem;
+      font-size: 1.1rem;
+      font-weight: 700;
+      box-shadow: 0 2px 8px rgba(212,175,55,0.12);
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+    }
+    .farm-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 16px #4169E1;
+    }
+    .farm-scroll {
+      margin-top: 2.5rem;
+      animation: bounce 1.6s infinite;
+    }
+    .farm-scroll span {
+      display: block;
+      width: 32px; height: 32px;
+      border-bottom: 4px solid #4169E1;
+      border-right: 4px solid #4169E1;
+      transform: rotate(45deg);
+      margin: 0 auto;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(12px); }
+    }
+    .farm-intro {
+      background: #fff;
+      border-radius: 0 0 32px 32px;
+      box-shadow: 0 2px 24px rgba(74,144,226,0.06);
+      padding: 2.5rem 1rem 2rem 1rem;
+      max-width: 900px;
+      margin: -3rem auto 2rem auto;
+      position: relative;
+      z-index: 3;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+      justify-content: center;
+    }
+    .farm-intro-text {
+      flex: 2;
+      font-size: 1.1rem;
+      color: #4169E1;
+      font-family: 'Lato', Arial, sans-serif;
+      min-width: 220px;
+    }
+    .farm-intro-imgs {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      min-width: 120px;
+    }
+    .farm-intro-imgs img {
+      width: 120px; height: 80px; object-fit: cover; border-radius: 16px; box-shadow: 0 2px 8px #A8B5A2;
+    }
+    @media (max-width: 700px) {
+      .farm-intro { flex-direction: column; gap: 1.2rem; }
+      .farm-intro-imgs { flex-direction: row; gap: 0.5rem; }
+      .farm-intro-imgs img { width: 80px; height: 60px; }
+    }
+    .farm-highlights {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+      background: #F8F8F8;
+      padding: 2rem 1rem;
+      max-width: 1000px;
+      margin: 0 auto 2rem auto;
+      border-radius: 24px;
+      box-shadow: 0 2px 12px #A8B5A2;
+    }
+    .farm-highlight {
+      background: #fff;
+      border-radius: 16px;
+      padding: 1.2rem 1rem;
+      text-align: center;
+      color: #4169E1;
+      font-weight: 700;
+      box-shadow: 0 2px 8px #A8B5A2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .farm-highlight-icon {
+      font-size: 2rem;
+      color: #A8B5A2;
+      margin-bottom: 0.5rem;
+    }
+    .farm-patio {
+      background: #fff;
+      border-radius: 24px;
+      box-shadow: 0 2px 24px #A8B5A2;
+      max-width: 1000px;
+      margin: 0 auto 2rem auto;
+      padding: 2rem 1rem 2.5rem 1rem;
+      text-align: center;
+    }
+    .farm-patio-img {
+      width: 100%;
+      max-width: 700px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 18px;
+      margin: 0 auto 1.2rem auto;
+      box-shadow: 0 2px 16px #A8B5A2;
+    }
+    .farm-patio-title {
+      font-family: 'Playfair Display', serif;
+      color: #4169E1;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .farm-patio-blurb {
+      color: #8FBC8F;
+      font-size: 1.08rem;
+      margin-bottom: 1.2rem;
+    }
+    .farm-amenities {
+      background: #F8F8F8;
+      border-radius: 24px;
+      box-shadow: 0 2px 12px #A8B5A2;
+      max-width: 1000px;
+      margin: 0 auto 2rem auto;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      justify-content: center;
+    }
+    .farm-amenity {
+      background: #fff;
+      border-radius: 12px;
+      padding: 0.8rem 1.2rem;
+      color: #4169E1;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      box-shadow: 0 2px 8px #A8B5A2;
+      font-size: 1rem;
+    }
+    .farm-amenity-icon {
+      font-size: 1.3rem;
+      color: #A8B5A2;
+    }
+    .farm-cta-bar {
+      background: #4169E1;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem 1.5rem 1rem;
+      border-radius: 24px;
+      max-width: 900px;
+      margin: 2rem auto 1.5rem auto;
+      box-shadow: 0 2px 24px #A8B5A2;
+    }
+    .farm-cta-bar .farm-btn { background: #D4AF37; color: #fff; margin: 1rem 0; }
+    .farm-cta-bar small { display: block; color: #FFF8E7; margin-top: 0.5rem; }
+    .farm-footer {
+      background: #F8F8F8;
+      color: #4169E1;
+      text-align: center;
+      padding: 1.5rem 0 1rem 0;
+      font-size: 1rem;
+      border-radius: 24px 24px 0 0;
+      margin: 2rem auto 0 auto;
+      max-width: 1000px;
+    }
+    .farm-footer a { color: #4169E1; text-decoration: underline; margin: 0 0.5rem; }
+    .farm-footer a:hover { color: #D4AF37; }
+  </style>
+</head>
+<body>
+  <main>
+    <!-- Hero Section -->
+    <section class="farm-hero">
+      <div class="farm-hero-overlay"></div>
+      <div class="farm-hero-content">
+        <h1 class="farm-hero-title">Welcome to Bluebonnet Ridge Farmhouse</h1>
+        <p class="farm-hero-sub">A timeless homestead retreat in Central Texas—where Southern charm meets peaceful country living. Relax on the back patio, surrounded by pecan orchards and open skies.</p>
+        <div class="farm-cta">
+          <a href="#" class="farm-btn">Stay With Us</a>
+        </div>
+        <div class="farm-scroll"><span></span></div>
+      </div>
+    </section>
+    <!-- Welcome / Introduction Section -->
+    <section class="farm-intro">
+      <div class="farm-intro-text">
+        Nestled on our family homestead since 1914, Bluebonnet Ridge Farmhouse offers a genuine escape to Texas countryside serenity. Step onto the expansive back patio—the heart of the home—where you can sip morning coffee under mature pecan trees, watch sunsets over the pastures, or gather around the fire pit with loved ones. Inside, find cozy, well-appointed spaces with modern comforts: a full kitchen, comfortable beds, high-speed Wi-Fi, and thoughtful touches throughout. Perfect for couples, families, or quiet getaways near Austin and Waco. We're delighted to share this special place with you.
+      </div>
+      <div class="farm-intro-imgs">
+        <img src="assets/placeholder-patio.jpg" alt="Back patio setup">
+        <img src="assets/placeholder-living.jpg" alt="Cozy living room">
+        <img src="assets/placeholder-bedroom.jpg" alt="Bedroom">
+      </div>
+    </section>
+    <!-- Key Highlights / Features Grid -->
+    <section class="farm-highlights">
+      <div class="farm-highlight"><span class="farm-highlight-icon">🛏️</span> Sleeps 6 Guests<br>3 Bedrooms<br>2 Bathrooms</div>
+      <div class="farm-highlight"><span class="farm-highlight-icon">🌳</span> Expansive Back Patio<br>Seating & Views</div>
+      <div class="farm-highlight"><span class="farm-highlight-icon">🍳</span> Full Kitchen<br>Outdoor Grill</div>
+      <div class="farm-highlight"><span class="farm-highlight-icon">📶</span> High-Speed Wi-Fi<br>Smart TV</div>
+      <div class="farm-highlight"><span class="farm-highlight-icon">🦌</span> Pecan Orchard<br>Wildlife Watching</div>
+      <div class="farm-highlight"><span class="farm-highlight-icon">🛣️</span> 1 Hour to Austin/Waco</div>
+    </section>
+    <!-- Back Patio Focus Section -->
+    <section class="farm-patio">
+      <img src="assets/placeholder-patio-evening.jpg" alt="Back patio evening" class="farm-patio-img">
+      <h2 class="farm-patio-title">The Back Patio Awaits</h2>
+      <div class="farm-patio-blurb">Unwind in the heart of the homestead—lounge on comfortable seating, enjoy al fresco meals, or stargaze under wide Texas skies. This outdoor living space is designed for memorable moments with family and friends.</div>
+      <a href="#" class="farm-btn">See More Photos</a>
+    </section>
+    <!-- Amenities Teaser -->
+    <section class="farm-amenities">
+      <div class="farm-amenity"><span class="farm-amenity-icon">📶</span> Wi-Fi</div>
+      <div class="farm-amenity"><span class="farm-amenity-icon">❄️</span> Air Conditioning</div>
+      <div class="farm-amenity"><span class="farm-amenity-icon">🍳</span> Full Kitchen</div>
+      <div class="farm-amenity"><span class="farm-amenity-icon">🧺</span> Washer/Dryer</div>
+      <div class="farm-amenity"><span class="farm-amenity-icon">🔥</span> Outdoor Seating/Fire Pit</div>
+      <div class="farm-amenity"><span class="farm-amenity-icon">🚗</span> Parking</div>
+      <div class="farm-amenity"><span class="farm-amenity-icon">🌳</span> Pecan Orchard</div>
+      <div class="farm-amenity"><span class="farm-amenity-icon">🦌</span> Wildlife Watching</div>
+    </section>
+    <!-- Call-to-Action Bar -->
+    <section class="farm-cta-bar">
+      <h3>Ready to Experience Southern Hospitality?</h3>
+      <a href="#" class="farm-btn">Stay With Us</a>
+      <small>Direct bookings preferred—message us for dates or questions.</small>
+    </section>
+    <!-- Footer -->
+    <footer class="farm-footer">
+      &copy; 2025 Bluebonnet Ridge Farmhouse | <a href="#">Instagram</a> <a href="#">Pinterest</a> | <a href="#">Contact</a>
+    </footer>
+  </main>
+</body>
+</html>
