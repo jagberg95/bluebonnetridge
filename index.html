@@ -10,60 +10,146 @@
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
+  <header class="site-header sticky-nav" id="topNav">
+    <div class="container nav-flex">
       <h1 class="logo">Bluebonnet Ridge</h1>
-      <nav class="main-nav">
-        <ul>
+      <nav class="main-nav" id="mainNav">
+        <ul class="nav-list">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
-          <li><a href="venue.html">Venue & Gallery</a></li>
-          <li><a href="services.html">Services & Packages</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="venue.html">Gallery</a></li>
+          <li><a href="tour.html">Tour</a></li>
           <li><a href="testimonials.html">Testimonials</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact & Booking</a></li>
+          <li><a href="contact.html">Connect With Us</a></li>
         </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
       </nav>
     </div>
   </header>
   <main>
     <!-- Hero Section -->
-    <section class="hero">
-      <video class="hero-video" autoplay loop muted poster="assets/hero-placeholder.jpg">
-        <source src="assets/hero-placeholder.mp4" type="video/mp4">
-        <!-- Placeholder image if video not supported -->
-      </video>
-      <div class="hero-overlay">
-        <h2>Create Unforgettable Memories at Bluebonnet Ridge – Where Timeless Beauty Meets Heartfelt Hospitality.</h2>
-        <p>Historic 1914 Central Texas venue blending rustic charm, scenic riverfront, and wildlife magic for budget-friendly outdoor weddings near Austin and Waco.</p>
+    <section class="hero enchanted-hero">
+      <div class="hero-bg">
+        <video class="hero-video" autoplay loop muted poster="assets/hero-placeholder.jpg">
+          <source src="assets/hero-placeholder.mp4" type="video/mp4">
+        </video>
+        <div class="bluebonnet-gradient"></div>
+        <div class="floating-petals"></div>
+      </div>
+      <div class="hero-overlay enchanted">
+        <h2 class="hero-title">Where Bluebonnets Bloom Eternal Love.</h2>
+        <p class="hero-subtitle">Discover timeless magic on our 1914 Central Texas estate—riverfront vows, whispering pecan orchards, and heartfelt hospitality near Austin & Waco.</p>
         <div class="hero-cta">
-          <a href="https://calendly.com/" class="btn btn-primary" target="_blank">Book a Tour</a>
-          <a href="services.html" class="btn btn-secondary">Explore Packages</a>
+          <a href="#" class="btn btn-gold" id="calendlyBtn">Schedule Your Tour</a>
+          <a href="#overview" class="btn btn-outline">Explore the Magic</a>
         </div>
-        <div class="hero-stats">
-          <span>15–18 Dream Weddings in Year 1</span>
-          <span>$86K Revenue from Nature-Inspired Events</span>
-          <span>On-Site Farmhouse Lodging for Seamless Stays</span>
-          <span>160 Acres of Historic Serenity</span>
+        <div class="scroll-arrow"><span></span></div>
+      </div>
+    </section>
+    <!-- Welcoming Overview Section -->
+    <section class="overview enchanted-overview" id="overview">
+      <div class="overview-flex">
+        <div class="overview-text">
+          <p>
+            Nestled on 160 acres of family legacy since 1914, Bluebonnet Ridge invites you into nature's embrace: Shaded cedar groves alive with deer and turkey, half-mile scenic riverfront, ancient oaks & cottonwoods, and fields that burst with bluebonnets each spring. From budget-friendly outdoor ceremonies ($1,500–$5,000) to our upcoming premium indoor hall (2027), we craft uplifting celebrations with integrity and joy—your forever starts here.
+          </p>
+        </div>
+        <div class="overview-img">
+          <img src="assets/bluebonnet-field-placeholder.jpg" alt="Bluebonnet field" class="circle-img">
         </div>
       </div>
     </section>
-    <!-- Overview Section -->
-    <section class="overview container">
-      <p>
-        Nestled on a family-owned 160-acre estate since 1914, Bluebonnet Ridge offers exclusive outdoor spaces for ceremonies in pecan orchards, riverfront vows, or cedar grove receptions, plus a highly rated vacation rental farmhouse as bridal/groom suite. Conveniently freeway-adjacent, we're one hour from Austin's affluent market and Waco's budget-conscious couples, delivering joy through natural splendor and values-driven care.
-      </p>
+    <!-- Premier Ceremony Sites Showcase -->
+    <section class="ceremony-showcase">
+      <h3 class="showcase-title">Premier Ceremony Sites</h3>
+      <div class="showcase-grid">
+        <div class="showcase-card">
+          <img src="assets/riverfront-ceremony-placeholder.jpg" alt="Riverfront Vows with Eagle Grace">
+          <div class="showcase-overlay">
+            <h4>Riverfront Vows with Eagle Grace</h4>
+            <p>Where waters sing and wildlife blesses your union.</p>
+            <a href="venue.html" class="showcase-link">See More in Gallery</a>
+          </div>
+        </div>
+        <div class="showcase-card">
+          <img src="assets/orchard-ceremony-placeholder.jpg" alt="Pecan Orchard Ceremonies Under Stars">
+          <div class="showcase-overlay">
+            <h4>Pecan Orchard Ceremonies Under Stars</h4>
+            <p>Romance beneath twinkling lights and ancient trees.</p>
+            <a href="venue.html" class="showcase-link">See More in Gallery</a>
+          </div>
+        </div>
+        <div class="showcase-card">
+          <img src="assets/bluebonnet-elopement-placeholder.jpg" alt="Bluebonnet Fields for Dreamy Elopements">
+          <div class="showcase-overlay">
+            <h4>Bluebonnet Fields for Dreamy Elopements</h4>
+            <p>Springtime magic for intimate vows and photos.</p>
+            <a href="venue.html" class="showcase-link">See More in Gallery</a>
+          </div>
+        </div>
+        <div class="showcase-card">
+          <img src="assets/blacksmith-shop-placeholder.jpg" alt="Blacksmith Shop Intimacy">
+          <div class="showcase-overlay">
+            <h4>Blacksmith Shop Intimacy</h4>
+            <p>Historic charm for unforgettable moments.</p>
+            <a href="venue.html" class="showcase-link">See More in Gallery</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Quick Enchantment Teasers -->
+    <section class="enchantment-teasers">
+      <div class="teaser-row">
+        <div class="teaser-icon"><img src="assets/icon-bluebonnet.svg" alt="Bluebonnet icon"><span>16 Enchanted Weddings Year 1</span></div>
+        <div class="teaser-icon"><img src="assets/icon-eagle.svg" alt="Eagle icon"><span>160 Acres of Whispering Beauty</span></div>
+        <div class="teaser-icon"><img src="assets/icon-oak.svg" alt="Oak leaf icon"><span>Farmhouse Suite from $300/Night</span></div>
+        <div class="teaser-icon"><img src="assets/icon-hall.svg" alt="Hall icon"><span>Phase 2 Indoor Elegance Coming 2027</span></div>
+      </div>
+    </section>
+    <!-- Social Proof & Follow Teaser -->
+    <section class="social-proof-follow">
+      <div class="social-grid">
+        <div><img src="assets/social1-placeholder.jpg" alt="Orchard Ceremony"></div>
+        <div><img src="assets/social2-placeholder.jpg" alt="Bluebonnet Field"></div>
+        <div><img src="assets/social3-placeholder.jpg" alt="Tented Reception"></div>
+        <div><img src="assets/social4-placeholder.jpg" alt="Riverfront Sunset"></div>
+        <div><img src="assets/social5-placeholder.jpg" alt="Wildlife Moment"></div>
+        <div><img src="assets/social6-placeholder.jpg" alt="Farmhouse Suite"></div>
+      </div>
+      <div class="follow-overlay">
+        <span>Follow Our Blooming Journey</span>
+        <a href="#" aria-label="Instagram"><img src="assets/icon-instagram.svg" alt="Instagram"></a>
+        <a href="#" aria-label="Pinterest"><img src="assets/icon-pinterest.svg" alt="Pinterest"></a>
+      </div>
+      <div class="follow-cta">
+        <a href="contact.html" class="btn btn-outline">Can't wait to hear from you</a>
+      </div>
+    </section>
+    <!-- Final Magic CTA Bar -->
+    <section class="magic-cta-bar">
+      <div class="magic-cta-flex">
+        <span>Ready to Let Bluebonnets Frame Your 'I Do'? Book a Tour Today</span>
+        <a href="#" class="btn btn-gold" id="calendlyBtn2">Schedule Your Tour</a>
+        <form class="cta-newsletter" action="#" method="post">
+          <input type="email" name="email" placeholder="Get Enchanted Updates & Planning Tips" required>
+          <button type="submit" class="btn btn-outline">Sign Up</button>
+        </form>
+      </div>
     </section>
   </main>
   <footer class="site-footer">
     <div class="container">
       <p>&copy; 2025 Bluebonnet Ridge LLC | <a href="#">Privacy Policy</a></p>
       <div class="footer-social">
-        <a href="#" aria-label="Instagram">Instagram</a>
-        <a href="#" aria-label="Pinterest">Pinterest</a>
+        <a href="#" aria-label="Instagram"><img src="assets/icon-instagram.svg" alt="Instagram"></a>
+        <a href="#" aria-label="Pinterest"><img src="assets/icon-pinterest.svg" alt="Pinterest"></a>
       </div>
-      <p class="footer-seo">Premier historic venue for unforgettable Central Texas weddings.</p>
+      <p class="footer-seo">Bluebonnet wedding venue Central Texas | Riverfront rustic weddings Austin Waco | Historic outdoor venue Texas</p>
     </div>
   </footer>
+  <script src="assets/main.js"></script>
 </body>
 </html>
