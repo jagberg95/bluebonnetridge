@@ -1,0 +1,1 @@
+/* Placeholder images for Bluebonnet Ridge website. Replace with real property photos and videos. */
