@@ -5,12 +5,15 @@
   Fonts: Playfair Display (headings), Lato (body)
 */
 
+
 :root {
-  --green: #7a9c7e;
-  --taupe: #d8cfc4;
-  --rust-red: #a0522d;
-  --gold: #bfa14a;
-  --cream: #f8f5f0;
+  --bluebonnet-blue: #3256a8; /* Deep bluebonnet */
+  --bluebonnet-light: #7fa6e6; /* Light blue accent */
+  --bluebonnet-violet: #6b5ca5; /* Violet accent */
+  --green: #8bbf8a; /* Soft green for foliage */
+  --taupe: #f3ede7; /* Lighter taupe for brightness */
+  --gold: #e6c97a; /* Elegant gold accent */
+  --cream: #fcfaf7; /* Brighter cream background */
   --dark: #2d2a26;
 }
 
@@ -27,6 +30,7 @@ body {
   font-family: 'Lato', Arial, sans-serif;
   background: var(--cream);
   color: var(--dark);
+  font-size: 1.05rem;
 }
 .container {
   max-width: 1200px;
@@ -34,16 +38,19 @@ body {
   padding: 0 1.5rem;
 }
 .site-header {
-  background: var(--taupe);
-  border-bottom: 2px solid var(--gold);
+  background: var(--cream);
+  border-bottom: 2px solid var(--bluebonnet-blue);
   padding: 0.5rem 0;
+  box-shadow: 0 2px 12px rgba(50,86,168,0.04);
 }
 .logo {
   font-family: 'Playfair Display', serif;
-  font-size: 2.2rem;
-  color: var(--rust-red);
+  font-size: 2.4rem;
+  color: var(--bluebonnet-blue);
   margin: 0;
   letter-spacing: 2px;
+  font-weight: 900;
+  text-shadow: 0 2px 8px var(--bluebonnet-light, #7fa6e6, 0.08);
 }
 .main-nav ul {
   list-style: none;
@@ -54,19 +61,22 @@ body {
 }
 .main-nav a {
   text-decoration: none;
-  color: var(--dark);
+  color: var(--bluebonnet-blue);
   font-weight: 700;
   transition: color 0.2s;
+  border-radius: 6px;
+  padding: 0.2rem 0.6rem;
 }
 .main-nav a:hover {
-  color: var(--gold);
+  color: var(--cream);
+  background: var(--bluebonnet-blue);
 }
 .hero {
   position: relative;
   width: 100vw;
   min-height: 60vh;
   overflow: hidden;
-  background: var(--green);
+  background: linear-gradient(120deg, var(--bluebonnet-light) 0%, var(--cream) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -83,23 +93,26 @@ body {
 .hero-overlay {
   position: relative;
   z-index: 2;
-  color: var(--cream);
+  color: var(--bluebonnet-blue);
   text-align: center;
   padding: 2rem 1rem;
   width: 100%;
+  background: rgba(252,250,247,0.85);
+  border-radius: 0 0 24px 24px;
+  box-shadow: 0 4px 24px rgba(50,86,168,0.07);
 }
 .hero-overlay h2 {
   font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: var(--gold);
-  text-shadow: 1px 1px 8px var(--dark);
+  color: var(--bluebonnet-violet);
+  text-shadow: 1px 1px 8px var(--bluebonnet-light);
 }
 .hero-overlay p {
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
-  color: var(--cream);
-  text-shadow: 1px 1px 6px var(--dark);
+  color: var(--bluebonnet-blue);
+  text-shadow: 1px 1px 6px var(--cream);
 }
 .hero-cta {
   margin-bottom: 1.5rem;
@@ -115,20 +128,22 @@ body {
   transition: background 0.2s, color 0.2s;
 }
 .btn-primary {
-  background: var(--gold);
-  color: var(--dark);
+  background: var(--bluebonnet-blue);
+  color: var(--cream);
+  border: 2px solid var(--bluebonnet-light);
 }
 .btn-primary:hover {
-  background: var(--rust-red);
-  color: var(--cream);
+  background: var(--gold);
+  color: var(--bluebonnet-blue);
 }
 .btn-secondary {
-  background: var(--rust-red);
-  color: var(--cream);
+  background: var(--bluebonnet-light);
+  color: var(--bluebonnet-blue);
+  border: 2px solid var(--bluebonnet-blue);
 }
 .btn-secondary:hover {
-  background: var(--gold);
-  color: var(--dark);
+  background: var(--bluebonnet-blue);
+  color: var(--cream);
 }
 .hero-stats {
   display: flex;
@@ -139,41 +154,42 @@ body {
   margin-top: 1rem;
 }
 .hero-stats span {
-  background: rgba(43, 42, 38, 0.7);
-  color: var(--gold);
+  background: var(--bluebonnet-light);
+  color: var(--bluebonnet-blue);
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-weight: 700;
+  box-shadow: 0 2px 8px rgba(50,86,168,0.07);
 }
 .overview {
   background: var(--taupe);
   border-radius: 12px;
   margin: 2rem 0;
   padding: 2rem 1.5rem;
-  box-shadow: 0 2px 12px rgba(43,42,38,0.07);
+  box-shadow: 0 2px 12px rgba(50,86,168,0.04);
   font-size: 1.1rem;
-  color: var(--dark);
+  color: var(--bluebonnet-blue);
 }
 .site-footer {
   background: var(--taupe);
-  border-top: 2px solid var(--gold);
+  border-top: 2px solid var(--bluebonnet-blue);
   padding: 1.5rem 0 1rem 0;
   text-align: center;
-  color: var(--dark);
+  color: var(--bluebonnet-blue);
   font-size: 1rem;
 }
 .footer-social a {
   margin: 0 0.5rem;
-  color: var(--rust-red);
+  color: var(--bluebonnet-violet);
   text-decoration: none;
   font-weight: 700;
 }
 .footer-social a:hover {
-  color: var(--gold);
+  color: var(--bluebonnet-blue);
 }
 .footer-seo {
   font-size: 0.95rem;
-  color: var(--green);
+  color: var(--bluebonnet-light);
   margin-top: 0.5rem;
 }
 @media (max-width: 800px) {
