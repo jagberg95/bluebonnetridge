@@ -31,15 +31,46 @@
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
 <body class="bg-ivory text-gray-800 antialiased" style="font-family: 'Lato', sans-serif;">
-  <!-- MAIN: Coming Soon Content -->
-  <main id="main-content" class="px-4 py-12 max-w-7xl mx-auto">
+  <!-- Responsive Navigation Bar with Logo -->
+  <nav class="fixed top-0 left-0 w-full bg-white bg-opacity-90 shadow z-50">
+    <div class="container mx-auto px-6 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center">
+        <img src="images/BBR Logo.png" alt="Bluebonnet Ridge Logo" class="h-12 md:h-16 mr-3 drop-shadow-lg">
+        <span class="text-2xl font-bold text-[var(--bluebonnet-blue)] font-serif">Bluebonnet Ridge</span>
+      </a>
+      <ul class="hidden md:flex space-x-6 text-lg">
+        <li><a href="index.html" class="hover:text-[var(--gold)] transition">Home</a></li>
+        <li><a href="gallery.html" class="hover:text-[var(--gold)] transition">Gallery</a></li>
+        <li><a href="coming-soon.html" class="hover:text-[var(--gold)] transition">Coming Soon</a></li>
+      </ul>
+      <button id="nav-toggle" class="md:hidden text-2xl text-[var(--bluebonnet-blue)] focus:outline-none">
+        <span>&#9776;</span>
+      </button>
+    </div>
+    <div id="nav-menu" class="md:hidden hidden bg-white px-6 pb-4">
+      <ul class="space-y-2 text-lg">
+        <li><a href="index.html" class="block hover:text-[var(--gold)] transition">Home</a></li>
+        <li><a href="gallery.html" class="block hover:text-[var(--gold)] transition">Gallery</a></li>
+        <li><a href="coming-soon.html" class="block hover:text-[var(--gold)] transition">Coming Soon</a></li>
+      </ul>
+    </div>
+  </nav>
+  <main class="pt-24 px-4 py-12 max-w-7xl mx-auto">
+    <!-- Hero Section with Logo and Fence Image -->
+    <section class="relative h-screen flex items-center justify-center" style="background: #F8F8F8;">
+      <img src="images/BBR logo fence.jpg" alt="Bluebonnet Ridge logo with gate" class="absolute inset-0 w-full h-full object-cover" style="z-index:0;" />
+      <div class="absolute z-10 max-w-2xl bg-black bg-opacity-50 rounded-xl px-8 py-6 shadow-lg"
+           style="top:8%; left:5%; right:auto; bottom:auto; transform:none; max-width:500px; padding-left:2rem; padding-right:2rem;">
+        <h1 class="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white text-left" style="text-shadow:0 2px 6px rgba(0,0,0,.4);">Coming Soon: Bluebonnet Ridge Wedding and Event Center</h1>
+      </div>
+    </section>
     <!-- Intro Paragraph (existing intro retained; add overlap hero atmosphere) -->
     <section id="intro" class="mb-12" aria-label="Intro">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         <div data-aos="fade-up" data-aos-duration="800">
-          <h1 class="text-3xl md:text-4xl font-display font-semibold text-bluebonnet mb-4">
-            Coming Soon: Bluebonnet Ridge Event Center
-          </h1>
+          <h2 class="text-3xl md:text-4xl font-display font-semibold text-bluebonnet mb-4">
+            Welcome to Bluebonnet Ridge Event Center
+          </h2>
           <p class="text-lg text-gray-700 leading-relaxed">
             A premier destination for weddings and gatherings nestled between Houston, Austin, and Dallas. Bluebonnet Ridge will offer elegant indoor spaces, sweeping Texas views, and the Southern charm you expect—designed for timeless memories.
           </p>
@@ -113,6 +144,15 @@
     <div class="container mx-auto px-6 text-center text-sm">
       © 2026 Bluebonnet Ridge. Belton, TX. All rights reserved.
     </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const navToggle = document.getElementById('nav-toggle');
+      const navMenu = document.getElementById('nav-menu');
+      navToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('hidden');
+      });
+    });
+  </script>
   </footer>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
