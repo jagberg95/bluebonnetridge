@@ -151,6 +151,12 @@
       navToggle.addEventListener('click', function() {
         navMenu.classList.toggle('hidden');
       });
+      // Close menu when a link is clicked (mobile)
+      navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function() {
+          navMenu.classList.add('hidden');
+        });
+      });
     });
   </script>
   </footer>
