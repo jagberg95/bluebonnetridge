@@ -3,81 +3,120 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Coming Soon — Bluebonnet Ridge Event Center</title>
-  <link rel="icon" href="images/favicon.png" type="image/png">
+  <title>Coming Soon – Bluebonnet Ridge Event Center | Weddings & Gatherings</title>
+  <meta name="description" content="Bluebonnet Ridge unveils a premier destination wedding and event center in Belton, Texas. Elegant Southern charm, expansive views, and sophisticated gatherings between Houston, Austin, and Dallas." />
+  <meta name="keywords" content="Destination wedding venue Belton TX, Central Texas wedding venue, Bluebonnet Ridge wedding, event center Belton, weddings near Houston/Austin/Dallas" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'bluebonnet': '#4A90E2',
+            'ivory':      '#FFF8E7',
+            'sage':       '#A8B5A2',
+            'gold-accent':'#D4AF37',
+          },
+          fontFamily: {
+            'display': ['"Playfair Display"', 'serif'],
+            'body':    ['Lato', 'ui-sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
-<body class="bg-[#F8F8F8] text-gray-800 antialiased relative">
-  <img src="images/BBR_Logo-removebg-preview.png" alt="Bluebonnet Ridge Watermark" class="fixed bottom-8 right-8 w-32 opacity-20 pointer-events-none z-10">
-<!-- Responsive Navigation Bar with Logo -->
-<nav class="fixed top-0 left-0 w-full bg-white bg-opacity-90 shadow z-50">
-  <div class="container mx-auto px-6 py-3 flex items-center justify-between">
-    <a href="index.html" class="flex items-center">
-      <img src="images/BBR Logo.png" alt="Bluebonnet Ridge Logo" class="h-12 md:h-16 mr-3 drop-shadow-lg">
-      <span class="text-2xl font-bold text-[var(--bluebonnet-blue)] font-serif">Bluebonnet Ridge</span>
-    </a>
-    <ul class="hidden md:flex space-x-6 text-lg">
-      <li><a href="index.html" class="hover:text-[var(--gold)] transition">Home</a></li>
-      <li><a href="gallery.html" class="hover:text-[var(--gold)] transition">Gallery</a></li>
-      <li><a href="coming-soon.html" class="hover:text-[var(--gold)] transition">Coming Soon</a></li>
-    </ul>
-    <button id="nav-toggle" class="md:hidden text-2xl text-[var(--bluebonnet-blue)] focus:outline-none">
-      <span>&#9776;</span>
-    </button>
-  </div>
-  <div id="nav-menu" class="md:hidden hidden bg-white px-6 pb-4">
-    <ul class="space-y-2 text-lg">
-      <li><a href="index.html" class="block hover:text-[var(--gold)] transition">Home</a></li>
-      <li><a href="gallery.html" class="block hover:text-[var(--gold)] transition">Gallery</a></li>
-      <li><a href="coming-soon.html" class="block hover:text-[var(--gold)] transition">Coming Soon</a></li>
-    </ul>
-  </div>
-</nav>
-<main class="pt-24">
-  <section class="relative h-screen flex items-center justify-center" style="background: #F8F8F8;">
-    <img src="images/BBR logo fence.jpg" alt="Bluebonnet Ridge logo with gate" class="absolute inset-0 w-full h-full object-cover" style="z-index:0;" />
-    <div class="absolute z-10 max-w-2xl bg-black bg-opacity-50 rounded-xl px-8 py-6 shadow-lg"
-         style="top:8%; left:5%; right:auto; bottom:auto; transform:none; max-width:500px; padding-left:2rem; padding-right:2rem;">
-      <h1 class="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white text-left" style="text-shadow:0 2px 6px rgba(0,0,0,.4);">Coming Soon: Bluebonnet Ridge Wedding and Event Center</h1>
+<body class="bg-ivory text-gray-800 antialiased" style="font-family: 'Lato', sans-serif;">
+  <!-- MAIN: Coming Soon Content -->
+  <main id="main-content" class="px-4 py-12 max-w-7xl mx-auto">
+    <!-- Intro Paragraph (existing intro retained; add overlap hero atmosphere) -->
+    <section id="intro" class="mb-12" aria-label="Intro">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div data-aos="fade-up" data-aos-duration="800">
+          <h1 class="text-3xl md:text-4xl font-display font-semibold text-bluebonnet mb-4">
+            Coming Soon: Bluebonnet Ridge Event Center
+          </h1>
+          <p class="text-lg text-gray-700 leading-relaxed">
+            A premier destination for weddings and gatherings nestled between Houston, Austin, and Dallas. Bluebonnet Ridge will offer elegant indoor spaces, sweeping Texas views, and the Southern charm you expect—designed for timeless memories.
+          </p>
+          <p class="mt-4 text-gray-700 leading-relaxed">
+            Stay tuned for updates, date availability, and previews of venue areas, from ceremony paths to sunset vistas and refined reception details.
+          </p>
+        </div>
+        <!-- Hero atmosphere layer using wildflowers image as backdrop within the section for depth -->
+        <div class="relative h-64 md:h-72 rounded-xl overflow-hidden shadow-lg" aria-label="Atmospheric backdrop">
+          <img src="images/wedding/grass and sun.jpg" alt="Golden hour wildflowers in a field" class="w-full h-full object-cover" loading="lazy" style="opacity:0.6;">
+          <div class="absolute inset-0 bg-black/25"></div>
+        </div>
+      </div>
+    </section>
+    <!-- Glimpse Grid: 1-3 columns (1 on small, 2 on medium, 3 on large) with 6 cards max -->
+    <section aria-label="Glimpse of What's Coming" class="mb-16">
+      <h2 class="text-2xl md:text-3xl font-semibold text-center text-bluebonnet mb-6" data-aos="fade-up" data-aos-duration="800">Glimpse of What's Coming</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card 1: Pecan Orchard Backdrop -->
+        <article class="bg-white rounded-xl shadow hover:shadow-xl transition transform hover:scale-105" data-aos="fade-up" data-aos-delay="50" loading="lazy">
+          <img src="images/wedding/pecantree.jpg" alt="Pecan orchard backdrop with grazing cattle" class="h-64 w-full object-cover rounded-t-xl" loading="lazy" />
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">Pecan Orchard Backdrop</h3>
+            <p class="text-sm text-gray-600">Iconic homestead landscape and rolling pastures.</p>
+          </div>
+        </article>
+        <!-- Card 2: Outdoor Ceremony & Garden Spaces -->
+        <article class="bg-white rounded-xl shadow hover:shadow-xl transition transform hover:scale-105" data-aos="fade-up" data-aos-delay="100" loading="lazy">
+          <img src="images/wedding/walkway.jpg" alt="Curved stone pathway with birdbath and cacti" class="h-64 w-full object-cover rounded-t-xl" loading="lazy" />
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">Future Pathways & Gardens</h3>
+            <p class="text-sm text-gray-600">Hints at ceremony routes and garden spaces to come.</p>
+          </div>
+        </article>
+        <!-- Card 3: Sunset Vistas for Memorable Events -->
+        <article class="bg-white rounded-xl shadow hover:shadow-xl transition transform hover:scale-105" data-aos="fade-up" data-aos-delay="150" loading="lazy">
+          <img src="images/wedding/sunset front.jpg" alt="Wide sunset over open field with fence/gate silhouette" class="h-64 w-full object-cover rounded-t-xl" loading="lazy" />
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">Sunset Vistas</h3>
+            <p class="text-sm text-gray-600">Dramatic evening skies and serene silhouettes for unforgettable moments.</p>
+          </div>
+        </article>
+        <!-- Card 4: Elegant Tablescapes -->
+        <article class="bg-white rounded-xl shadow hover:shadow-xl transition transform hover:scale-105" data-aos="fade-up" data-aos-delay="200" loading="lazy">
+          <img src="images/wedding/1 setting blue.jpg" alt="Gold-rimmed plate with cupcake, strawberries, and blue flower on lace" class="h-64 w-full object-cover rounded-t-xl" loading="lazy" />
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">Elegant Tablescapes</h3>
+            <p class="text-sm text-gray-600">Sophisticated details to inspire future celebrations.</p>
+          </div>
+        </article>
+        <!-- Card 5: Ceremony Arbors -->
+        <article class="bg-white rounded-xl shadow hover:shadow-xl transition transform hover:scale-105" data-aos="fade-up" data-aos-delay="250" loading="lazy">
+          <img src="images/wedding/sq arbor full.jpg" alt="Wooden arbor with white/peach floral draping" class="h-64 w-full object-cover rounded-t-xl" loading="lazy" />
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">Ceremony Arbors</h3>
+            <p class="text-sm text-gray-600">Future arbors and floral accents for ceremonies.</p>
+          </div>
+        </article>
+        <!-- Card 6: Versatile Floral Draping -->
+        <article class="bg-white rounded-xl shadow hover:shadow-xl transition transform hover:scale-105" data-aos="fade-up" data-aos-delay="300" loading="lazy">
+          <img src="images/wedding/sq arbor orange full.jpg" alt="Arbor with orange/draped florals and rich color palette" class="h-64 w-full object-cover rounded-t-xl" loading="lazy" />
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">Versatile Floral Draping</h3>
+            <p class="text-sm text-gray-600">Flexible styling options to suit any mood or season.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-bluebonnet text-white py-6">
+    <div class="container mx-auto px-6 text-center text-sm">
+      © 2026 Bluebonnet Ridge. Belton, TX. All rights reserved.
     </div>
-  </section>
-  <section class="container mx-auto px-6 py-12">
-    <h1 class="text-3xl md:text-4xl font-semibold text-center mb-8">Coming Soon: Bluebonnet Ridge Event Center</h1>
-    <p class="text-lg text-center mb-6">We’re excited to announce plans for a new event center at Bluebonnet Ridge Farmhouse! This space will host weddings, reunions, retreats, and more. Check back here for updates, progress photos, and opening dates.</p>
-    <div class="bg-white rounded-xl shadow p-8 text-center">
-      <p class="text-xl font-semibold mb-4">Stay tuned for:</p>
-      <ul class="list-disc list-inside text-lg mb-4">
-        <li>Construction progress & photos</li>
-        <li>Grand opening date</li>
-        <li>Booking information</li>
-        <li>Special offers for early reservations</li>
-      </ul>
-      <p class="text-gray-600">For questions or to join our interest list, email <a href="mailto:info@bluebonnetridge.com" class="text-[var(--bluebonnet-blue)] underline">info@bluebonnetridge.com</a>.</p>
-    </div>
-  </section>
-</main>
-<footer class="bg-[var(--sage)] text-white py-8" aria-label="Footer">
-  <div class="container mx-auto text-center">
-    <img src="images/BBR Logo.png" alt="Bluebonnet Ridge Logo" class="mx-auto h-16 mb-4">
-    <p>&copy; 2026 Bluebonnet Ridge Farmhouse. All rights reserved.</p>
-    <div class="flex items-center justify-center space-x-4 mt-4">
-      <a href="#" aria-label="Instagram" class="text-white hover:text-[var(--gold)]">Instagram</a>
-      <a href="#" aria-label="Facebook" class="text-white hover:text-[var(--gold)]">Facebook</a>
-    </div>
-    <div class="hidden" aria-label="Email placeholder">
-      <span>Email: placeholder@example.com</span>
-    </div>
-  </div>
-</footer>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const navToggle = document.getElementById('nav-toggle');
-    const navMenu = document.getElementById('nav-menu');
-    navToggle.addEventListener('click', function() {
-      navMenu.classList.toggle('hidden');
-    });
-  });
-</script>
+  </footer>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 750 });
+  </script>
 </body>
 </html>
