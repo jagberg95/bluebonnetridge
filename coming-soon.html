@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Coming Soon — Bluebonnet Ridge Event Center</title>
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-[#F8F8F8] text-gray-800 antialiased">
+<!-- Responsive Navigation Bar with Logo -->
+<nav class="fixed top-0 left-0 w-full bg-white bg-opacity-90 shadow z-50">
+  <div class="container mx-auto px-6 py-3 flex items-center justify-between">
+    <a href="index.html" class="flex items-center">
+      <img src="images/logo-br-header.png" alt="Bluebonnet Ridge Farmhouse" class="h-10 md:h-12 mr-3">
+      <span class="text-2xl font-bold text-[var(--bluebonnet-blue)] font-serif">Bluebonnet Ridge Farmhouse</span>
+    </a>
+    <ul class="hidden md:flex space-x-6 text-lg">
+      <li><a href="index.html" class="hover:text-[var(--gold)] transition">Home</a></li>
+      <li><a href="map.html" class="hover:text-[var(--gold)] transition">Map</a></li>
+      <li><a href="gallery.html" class="hover:text-[var(--gold)] transition">Gallery</a></li>
+      <li><a href="coming-soon.html" class="hover:text-[var(--gold)] transition">Coming Soon</a></li>
+    </ul>
+    <button id="nav-toggle" class="md:hidden text-2xl text-[var(--bluebonnet-blue)] focus:outline-none">
+      <span>&#9776;</span>
+    </button>
+  </div>
+  <div id="nav-menu" class="md:hidden hidden bg-white px-6 pb-4">
+    <ul class="space-y-2 text-lg">
+      <li><a href="index.html" class="block hover:text-[var(--gold)] transition">Home</a></li>
+      <li><a href="map.html" class="block hover:text-[var(--gold)] transition">Map</a></li>
+      <li><a href="gallery.html" class="block hover:text-[var(--gold)] transition">Gallery</a></li>
+      <li><a href="coming-soon.html" class="block hover:text-[var(--gold)] transition">Coming Soon</a></li>
+    </ul>
+  </div>
+</nav>
+<main class="pt-24">
+  <section class="container mx-auto px-6 py-12">
+    <h1 class="text-3xl md:text-4xl font-semibold text-center mb-8">Coming Soon: Bluebonnet Ridge Event Center</h1>
+    <p class="text-lg text-center mb-6">We’re excited to announce plans for a new event center at Bluebonnet Ridge Farmhouse! This space will host weddings, reunions, retreats, and more. Check back here for updates, progress photos, and opening dates.</p>
+    <div class="bg-white rounded-xl shadow p-8 text-center">
+      <p class="text-xl font-semibold mb-4">Stay tuned for:</p>
+      <ul class="list-disc list-inside text-lg mb-4">
+        <li>Construction progress & photos</li>
+        <li>Grand opening date</li>
+        <li>Booking information</li>
+        <li>Special offers for early reservations</li>
+      </ul>
+      <p class="text-gray-600">For questions or to join our interest list, email <a href="mailto:info@bluebonnetridge.com" class="text-[var(--bluebonnet-blue)] underline">info@bluebonnetridge.com</a>.</p>
+    </div>
+  </section>
+</main>
+<footer class="bg-[var(--sage)] text-white py-8" aria-label="Footer">
+  <div class="container mx-auto text-center">
+    <img src="images/logo-br-footer.png" alt="Bluebonnet Ridge" class="mx-auto h-16 mb-4">
+    <p>&copy; 2026 Bluebonnet Ridge Farmhouse. All rights reserved.</p>
+    <div class="flex items-center justify-center space-x-4 mt-4">
+      <a href="#" aria-label="Instagram" class="text-white hover:text-[var(--gold)]">Instagram</a>
+      <a href="#" aria-label="Facebook" class="text-white hover:text-[var(--gold)]">Facebook</a>
+    </div>
+    <div class="hidden" aria-label="Email placeholder">
+      <span>Email: placeholder@example.com</span>
+    </div>
+  </div>
+</footer>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    navToggle.addEventListener('click', function() {
+      navMenu.classList.toggle('hidden');
+    });
+  });
+</script>
+</body>
+</html>
