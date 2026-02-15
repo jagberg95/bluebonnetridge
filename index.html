@@ -9,7 +9,9 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="icon" href="images/favicon.png" type="image/png">
-  <!-- AOS (Animate On Scroll) CDN removed for troubleshooting -->
+  <!-- AOS (Animate On Scroll) CDN -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <style>
     :root{
       --bluebonnet-blue: #4A90E2;
@@ -205,10 +207,54 @@
 <section id="availability" class="py-14 bg-[var(--ivory)]">
   <div class="container mx-auto px-6" data-aos="fade-up" data-aos-duration="800">
     <h2 class="text-2xl md:text-3xl font-semibold text-center mb-6">Availability Calendar</h2>
-    <!-- Calendar link removed as requested -->
-    <p class="text-center text-gray-600 mt-4 text-sm">For the most up-to-date availability, check Airbnb or VRBO.</p>
+    <iframe src="https://calendar.google.com/calendar/embed?src=bluebonnetridge%40gmail.com&ctz=America%2FChicago" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+    <p class="text-center text-gray-600 mt-4 text-sm">Powered by Google Calendar. For the most up-to-date availability, check Airbnb or VRBO.</p>
   </div>
 </section>
-<!-- Remove old calendar scripts -->
-</body>
-</html>
+<script src="https://cdn.jsdelivr.net/npm/ical.js@1.4.0/build/ical.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.css" />
+<script>
+(async function() {
+  const icalUrl = 'http://www.vrbo.com/icalendar/5bc9126ed69b42799f3b952e208138dd.ics';
+  const res = await fetch(icalUrl);
+  const ics = await res.text();
+  const jcalData = ICAL.parse(ics);
+  const comp = new ICAL.Component(jcalData);
+  const events = comp.getAllSubcomponents('vevent');
+  const booked = events.map(ev => {
+    const e = new ICAL.Event(ev);
+    return {start: e.startDate.toJSDate(), end: e.endDate.toJSDate()};
+  });
+  // Build array of all booked dates
+  const bookedDates = [];
+  booked.forEach(({start, end}) => {
+    let d = new Date(start);
+    while (d < end) {
+      bookedDates.push(d.toISOString().slice(0,10));
+      d.setDate(d.getDate() + 1);
+    }
+  });
+  // Initialize Litepicker
+  new Litepicker({
+    element: document.getElementById('calendar'),
+    inlineMode: true,
+    singleMode: false,
+    numberOfMonths: 2,
+    numberOfColumns: 2,
+    lockDays: bookedDates,
+    tooltipText: 'Unavailable',
+    tooltipPosition: 'top',
+    format: 'YYYY-MM-DD',
+    lang: 'en-US',
+    setup: (picker) => {
+      picker.on('render', () => {
+        // Style unavailable days
+        document.querySelectorAll('.litepicker-day-item.is-locked').forEach(el => {
+          el.style.background = '#e2e8f0';
+          el.style.color = '#aaa';
+        });
+      });
+    }
+  });
+})();
