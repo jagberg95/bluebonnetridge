@@ -33,6 +33,41 @@
       </ul>
     </nav>
   </header>
+  <!-- Responsive Navigation Bar -->
+  <nav class="fixed top-0 left-0 w-full bg-white bg-opacity-90 shadow z-50">
+    <div class="container mx-auto px-6 py-3 flex items-center justify-between">
+      <a href="index.html" class="text-2xl font-bold text-[var(--bluebonnet-blue)] font-serif">Bluebonnet Ridge Farmhouse</a>
+      <ul class="hidden md:flex space-x-6 text-lg">
+        <li><a href="index.html" class="hover:text-[var(--gold)] transition">Home</a></li>
+        <li><a href="booking.html" class="hover:text-[var(--gold)] transition">Booking</a></li>
+        <li><a href="map.html" class="hover:text-[var(--gold)] transition">Map</a></li>
+        <li><a href="amenities.html" class="hover:text-[var(--gold)] transition">Amenities</a></li>
+      </ul>
+      <!-- Mobile menu button -->
+      <button id="nav-toggle" class="md:hidden text-2xl text-[var(--bluebonnet-blue)] focus:outline-none">
+        <span>&#9776;</span>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div id="nav-menu" class="md:hidden hidden bg-white px-6 pb-4">
+      <ul class="space-y-2 text-lg">
+        <li><a href="index.html" class="block hover:text-[var(--gold)] transition">Home</a></li>
+        <li><a href="booking.html" class="block hover:text-[var(--gold)] transition">Booking</a></li>
+        <li><a href="map.html" class="block hover:text-[var(--gold)] transition">Map</a></li>
+        <li><a href="amenities.html" class="block hover:text-[var(--gold)] transition">Amenities</a></li>
+      </ul>
+    </div>
+  </nav>
+  <script>
+    // Mobile nav toggle
+    document.addEventListener('DOMContentLoaded', function() {
+      const navToggle = document.getElementById('nav-toggle');
+      const navMenu = document.getElementById('nav-menu');
+      navToggle.addEventListener('click', function() {
+        navMenu.classList.toggle('hidden');
+      });
+    });
+  </script>
   <!-- HERO SHOT -->
   <section class="pt-24 pb-12" aria-label="Map hero">
     <div class="container mx-auto px-6 text-center">
