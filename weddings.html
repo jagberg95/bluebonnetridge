@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Bluebonnet Ridge — Premier Destination Wedding Venue in Belton, TX</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Discover Bluebonnet Ridge, the premier destination wedding venue in Belton, Texas.
+A timeless farmhouse setting with sweeping views, ideal for weddings between Houston, Austin, and Dallas." />
+  <!-- Tailwind CSS via CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <!-- AOS for subtle animations -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    :root {
+      --bluebonnet: #4A90E2;
+      --gold: #D4AF37;
+      --cream: #FFF8F0;
+      --bg: #F8F8F8;
+    }
+    body { font-family: 'Lato', system-ui, -apple-system, sans-serif; background: var(--bg); }
+    h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
+  </style>
+</head>
+<body class="text-gray-700">
+<!-- Nav / header could be included from your main site (kept minimal here) -->
+<header class="sr-only" aria-label="Site header">Bluebonnet Ridge Navigation</header>
+<!-- Hero: keep logo center; text sits in safe zones via overlay -->
+<section class="relative w-full h-screen bg-cover bg-center" style="min-height: 72vh; background-image:url('hero-image.jpg');" aria-label="Wedding venue hero">
+    <!-- Optional parallax overlay to ensure text readability -->
+    <div class="absolute inset-0 bg-black/40"></div>
+    <!-- Text block positioned away from center logo; use safe zones (left/right/top) -->
+    <div class="absolute inset-0 flex items-center" style="padding: 6rem 2rem;">
+      <div class="max-w-2xl bg-white/70 backdrop-blur-md p-6 md:p-8 rounded-lg" data-aos="fade-up" data-aos-duration="1000" aria-label="Hero headline and subhead">
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900 mb-4" style="font-family: 'Playfair Display', serif;">
+          Say "I Do" Under Texas Skies
+        </h1>
+        <p class="text-lg md:text-xl text-gray-800 leading-relaxed">
+          Bluebonnet Ridge — a premier destination wedding venue in Belton, Texas. Elegant farmhouse charm, timeless views,
+          and a back patio that becomes your celebration’s heartbeat. Perfect for weddings between Houston, Austin, and Dallas.
+        </p>
+        <div class="mt-6">
+          <a href="#inquire" class="inline-block bg-amber-600 text-white py-3 px-6 rounded-md shadow hover:bg-amber-700 transition">
+            Get On The List
+          </a>
+        </div>
+      </div>
+    </div>
+</section>
+<!-- Vision / introduction -->
+<section class="py-16 px-4" aria-label="Vision">
+    <div class="max-w-4xl mx-auto text-center" data-aos="fade-up" data-aos-duration="800">
+      <p class="text-xl text-gray-700 mb-4">
+        Imagine a ceremony set against rolling pastures at golden hour, followed by an intimate reception beneath string lights and pecan trees. Bluebonnet Ridge offers exclusive use and a timeless, country-chic backdrop your guests will remember for a lifetime.
+      </p>
+    </div>
+  </section>
+<!-- Mood grid: Imagine Your Day (images to swap in) -->
+<section class="py-12 bg-white" aria-label="Mood grid">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-semibold text-center mb-8" data-aos="fade-up" data-aos-duration="800">Imagine Your Day</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" data-aos="fade-up" data-aos-duration="900">
+        <!-- Card 1 -->
+        <div class="rounded-lg overflow-hidden shadow-sm bg-gray-50" aria-label="Ceremony setting">
+          <div class="h-40 bg-cover bg-center" style="background-image:url('placeholder-ceremony.jpg')"></div>
+          <div class="p-3 text-sm">
+            Ceremony setting
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="rounded-lg overflow-hidden shadow-sm bg-gray-50" aria-label="Reception on the patio">
+          <div class="h-40 bg-cover bg-center" style="background-image:url('placeholder-patio.jpg')"></div>
+          <div class="p-3 text-sm">
+            Patio reception under string lights
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="rounded-lg overflow-hidden shadow-sm bg-gray-50" aria-label="Getting-ready suites">
+          <div class="h-40 bg-cover bg-center" style="background-image:url('placeholder-suites.jpg')"></div>
+          <div class="p-3 text-sm">
+            Getting-ready suites
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="rounded-lg overflow-hidden shadow-sm bg-gray-50" aria-label="Details & decor">
+          <div class="h-40 bg-cover bg-center" style="background-image:url('placeholder-details.jpg')"></div>
+          <div class="p-3 text-sm">
+            Floral & table decor ideas
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Highlights -->
+<section class="py-12" aria-label="Highlights">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 text-center gap-6">
+        <div class="p-4 bg-white rounded-lg shadow-sm" data-aos="fade-up" data-aos-duration="800">
+          <div class="text-2xl font-semibold text-gray-800">Sleeps 15</div>
+          <div class="text-sm text-gray-600">Exclusive use for your day</div>
+        </div>
+        <div class="p-4 bg-white rounded-lg shadow-sm" data-aos="fade-up" data-aos-duration="900">
+          <div class="text-2xl font-semibold text-gray-800">On-site Ceremony & Reception</div>
+          <div class="text-sm text-gray-600">All in one location</div>
+        </div>
+        <div class="p-4 bg-white rounded-lg shadow-sm" data-aos="fade-up" data-aos-duration="1000">
+          <div class="text-2xl font-semibold text-gray-800">Belton, TX</div>
+          <div class="text-sm text-gray-600">Accessible from HOU/AUS/DAL</div>
+        </div>
+        <div class="p-4 bg-white rounded-lg shadow-sm" data-aos="fade-up" data-aos-duration="1100">
+          <div class="text-2xl font-semibold text-gray-800">Dates 2026</div>
+          <div class="text-sm text-gray-600">Now booking premier dates</div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Availability Calendar -->
+<section id="availability" class="py-14 bg-[var(--cream)]">
+  <div class="container mx-auto px-6" data-aos="fade-up" data-aos-duration="800">
+    <h2 class="text-2xl md:text-3xl font-semibold text-center mb-6">Availability Calendar</h2>
+    <div class="flex justify-center">
+      <iframe src="https://calendar.google.com/calendar/embed?src=bluebonnetridge%40gmail.com&ctz=America%2FChicago" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    </div>
+    <p class="text-center text-gray-600 mt-4 text-sm">Powered by Google Calendar. For the most up-to-date availability, check Airbnb or VRBO.</p>
+  </div>
+</section>
+<!-- CTA / signup form -->
+<section id="inquire" class="py-12 bg-white" aria-label="Inquire">
+    <div class="max-w-3xl mx-auto px-4 text-center" data-aos="fade-up" data-aos-duration="800">
+      <h3 class="text-2xl font-semibold mb-3">Be among the first to book your dream day</h3>
+      <p class="mb-6 text-gray-700">Join our launch list to receive intimate details and date availability for
+Bluebonnet Ridge’s premier wedding venue.</p>
+      <!-- Simple mailto form (swap to your CMS/form later) -->
+      <form class="grid grid-cols-1 sm:grid-cols-2 gap-4 justify-center items-center" onsubmit="return false;">
+        <input aria-label="Your name" placeholder="Your name" class="border rounded px-3 py-2" />
+        <input aria-label="Email" placeholder="Email" type="email" class="border rounded px-3 py-2" />
+        <input aria-label="Wedding date (optional)" placeholder="Preferred date (optional)" class="border rounded px-3 py-2" />
+        <button type="submit" class="col-span-2 bg-amber-600 text-white py-2 px-4 rounded-md hover:bg-amber-700">Notify Me</button>
+      </form>
+    </div>
+  </section>
+<!-- Footer -->
+<footer class="py-6 text-center text-sm text-gray-600" aria-label="Footer">
+    <p>&copy; 2026 Bluebonnet Ridge. Belton, TX.</p>
+    <p>Instagram • Facebook (links to be added)</p>
+  </footer>
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({ once: true, duration: 800 });
+  </script>
+</body>
+</html>
